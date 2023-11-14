@@ -2,20 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Vacancy;
-use App\Http\Requests\StoreVacancyRequest;
-use App\Http\Requests\UpdateVacancyRequest;
+use App\Models\Resume;
+use App\Http\Requests\StoreResumeRequest;
+use App\Http\Requests\UpdateResumeRequest;
 
-class VacancyController extends Controller
+class ResumeController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $vacancies = Vacancy::latest()->get();
-
-        return view('vacancies.index', compact('vacancies'));
+        //
     }
 
     /**
@@ -29,7 +27,7 @@ class VacancyController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreVacancyRequest $request)
+    public function store(StoreResumeRequest $request)
     {
         //
     }
@@ -37,7 +35,7 @@ class VacancyController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Vacancy $vacancy)
+    public function show(Resume $resume)
     {
         //
     }
@@ -45,7 +43,7 @@ class VacancyController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Vacancy $vacancy)
+    public function edit(Resume $resume)
     {
         //
     }
@@ -53,7 +51,7 @@ class VacancyController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateVacancyRequest $request, Vacancy $vacancy)
+    public function update(UpdateResumeRequest $request, Resume $resume)
     {
         //
     }
@@ -61,7 +59,7 @@ class VacancyController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Vacancy $vacancy)
+    public function destroy(Resume $resume)
     {
         //
     }

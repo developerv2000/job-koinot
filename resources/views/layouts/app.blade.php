@@ -10,8 +10,11 @@
 
     <title>Коиноти Нав</title>
 
-    {{-- Selectize --}}
+    {{-- Normalize --}}
     <link rel="stylesheet" href="{{ asset('plugins/normalize.css') }}">
+
+    {{-- Bootstrap v5.3 --}}
+    <link rel="stylesheet" href="{{ asset('plugins/bootstrap/bootstrap.min.css') }}"">
 
     {{-- Owl Carousel --}}
     <link rel="stylesheet" href="{{ asset('plugins/owl-carousel/owl.carousel.min.css') }}">
@@ -29,7 +32,10 @@
     <x-spinner />
 
     {{-- JQuery --}}
-    <script src="{{ asset('plugins/jquery/jquery-3.6.4.min.js') }}"></script>
+    <script src="{{ asset('plugins/jquery-3.6.4.min.js') }}"></script>
+
+    {{-- Bootstrap v5.3 --}}
+    <script src="{{ asset('plugins/bootstrap/bootstrap.min.js') }}"></script>
 
     {{-- Owl Carousel --}}
     <script src="{{ asset('plugins/owl-carousel/owl.carousel.min.js') }}"></script>

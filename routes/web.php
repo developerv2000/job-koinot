@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ResumeController;
 use App\Http\Controllers\VacancyController;
 use Illuminate\Support\Facades\Route;
 
@@ -16,4 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(VacancyController::class)->name('vacancies.')->group(function () {
     Route::get('/', 'index')->name('index');
+});
+
+Route::controller(ResumeController::class)->name('resumes.')->group(function () {
+    Route::post('resumes/upload/{vacancy}', 'upload')->name('upload');
 });

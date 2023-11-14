@@ -11,11 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('vacancies', function (Blueprint $table) {
-            $table->unsignedSmallInteger('id')->autoIncrement();
-            $table->string('name');
-            $table->string('salary');
-            $table->text('body');
+        Schema::create('resumes', function (Blueprint $table) {
+            $table->id();
             $table->timestamps();
         });
     }
@@ -25,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('vacancies');
+        Schema::dropIfExists('resumes');
     }
 };
