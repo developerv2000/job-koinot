@@ -29,6 +29,8 @@
         @yield('main')
     </main>
 
+    @include('layouts.footer')
+
     <x-spinner />
 
     {{-- JQuery --}}

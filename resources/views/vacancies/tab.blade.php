@@ -16,16 +16,17 @@
                 <h2 class="vacancy-name">{{ $vacancy->name }}</h2>
                 <div class="vacancy-body">{!! $vacancy->body !!}</div>
 
-                <form class="upload-resume" action="{{ route('resumes.upload', $vacancy->id) }}" method="POST" enctype="multipart/form-data">
+                <form class="upload-resume" action="{{ route('resumes.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
+                    <input type="hidden" name="vacancy_id" value="{{ $vacancy->id }}">
 
                     <label class="upload-resume__label">
                         <div class="upload-resume__btn">
                             <img class="upload-resume__icon" src="{{ asset('img/main/attach.svg') }}" alt="attach">
                             <span class="upload-resume__desc">Добавить резюме</span>
                         </div>
-                        
-                        <input class="visually-hidden" type="file" name="resume" accept=".docx, .doc, .pdf">
+
+                        <input class="upload-resume__desc visually-hidden" type="file" name="resume" accept=".docx, .doc, .pdf">
                     </label>
                 </form>
             </div>

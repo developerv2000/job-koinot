@@ -20,5 +20,5 @@ Route::controller(VacancyController::class)->name('vacancies.')->group(function 
 });
 
 Route::controller(ResumeController::class)->name('resumes.')->group(function () {
-    Route::post('resumes/upload/{vacancy}', 'upload')->name('upload');
+    Route::post('resumes/store', 'store')->name('store');
 });

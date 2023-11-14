@@ -128,6 +128,54 @@ a {
 /* ------------ /end Spinner ------------ */
 
 
+/* ------------ Carousel ------------ */
+.owl-carousel {
+    padding: 0 120px;
+}
+
+.owl-carousel .owl-stage {
+    display: flex;
+    align-items: center;
+}
+
+.owl-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    z-index: -1;
+}
+/* ------------ /end Carousel ------------ */
+
+
+/* ------------ /end Carousel ------------ */
+.footer {
+    background-color: #EFEFFF;
+}
+
+.footer__inner {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.socials {
+    display: flex;
+    gap: 68px;
+}
+
+.iconed-link {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 300;
+}
+/* ------------ /end Carousel ------------ */
+
+
 /* ------------ Home ------------ */
 /* Banner */
 .welcome {
@@ -177,10 +225,14 @@ a {
 }
 
 /* Vacancies */
+.vacancies {
+    background-color: #F0F0F0;
+}
+
 .vacancies__inner {
     flex-direction: column;
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 100px;
 }
 
 .vacancies__title {
@@ -189,63 +241,65 @@ a {
 
 /* Tab */
 .vacancies-tab {
-    padding: 24px 16px 24px 24px;
-    background-color: #F0F0F0;
+    background-color: white;
     overflow: hidden;
 }
 
 .vacancies-tab>.nav {
     max-height: 68vh;
-    width: 320px;
-    min-width: 320px;
+    width: 300px;
+    min-width: 300px;
     flex-wrap: nowrap;
     gap: 24px;
     overflow: auto;
-    padding-right: 24px;
+    padding: 24px;
 }
 
 .vacancies-tab>.tab-content {
     max-height: 68vh;
     flex-grow: 1;
     overflow: auto;
-    padding-left: 24px;
-    padding-bottom: 12px;
+    padding: 24px;
 }
 
 .vacancies-tab>.nav::-webkit-scrollbar,
 .vacancies-tab>.tab-content::-webkit-scrollbar {
-    width: 4px;
+    width: 5px;
 }
 
 .vacancies-tab>.nav::-webkit-scrollbar-track,
 .vacancies-tab>.tab-content::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 4px #BFBFBF;
+    box-shadow: inset 0 0 5px #e3e3e3;
 }
 
 .vacancies-tab>.nav::-webkit-scrollbar-thumb,
 .vacancies-tab>.tab-content::-webkit-scrollbar-thumb {
-    background-color: #BFBFBF;
-    outline: 1px solid #BFBFBF;
+    background-color: #e3e3e3;
+    outline: 1px solid #e3e3e3;
 }
 
 .vacancies-tab .nav-link {
     padding: 12px 16px;
-    background-color: white;
+    box-shadow: 1px 1px 6px #00000038;
     color: var(--text-color);
+    border: 1px solid #F0F0F0;
 }
 
 .vacancies-tab .nav-link.active {
     background-color: var(--main-color);
+    border-color: var(--main-color);
+    box-shadow: 1px 1px 6px #ed2e38a6;
     color: white;
 }
 
 .vacancy-name {
     margin-bottom: 8px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
 }
 
 .vacancies-tab>.tab-content .vacancy-name {
+    font-size: 18px;
     font-weight: bold;
 }
 
@@ -261,7 +315,6 @@ a {
 .upload-resume {
     display: flex;
     justify-content: flex-end;
-    padding-right:24px;
     padding-top: 12px;
 }
 
@@ -275,9 +328,70 @@ a {
     color: white;
     border-radius: 8px;
     background: linear-gradient(268deg, #ED2E38 22%, #3C324C 86%);
+    cursor: pointer;
 }
 
 .upload-resume__icon {
     width: 28px;
+}
+
+/* Values */
+.values__inner {
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.values__title {
+    margin-bottom: 48px;
+}
+
+.values-list {
+    display: flex;
+    gap: 84px;
+}
+
+.values-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    width: 25%;
+    padding: 40px;
+    box-shadow: 5px 5px 20px 0px #86868640, 5px 5px 10px 0px #ED2E3833 inset;
+    border-radius: 8px;
+}
+
+.values-card__image {
+    height: 90px;
+}
+
+.values-card__title {
+    font-size: 22px;
+}
+
+/* Companies */
+.companies {
+    background-color: #3C324C;
+    color: white;
+}
+
+.companies__inner {
+    flex-direction: column;
+    padding-top: 100px;
+    padding-bottom: 120px;
+}
+
+.companies__title {
+    margin-bottom: 60px;
+}
+
+.companies__link {
+    display: flex;
+}
+
+.companies__image {
+    width: 100%;
 }
 /* ------------ /end Home ------------ */
