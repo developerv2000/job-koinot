@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="{{ asset('plugins/owl-carousel/owl.theme.default.min.css') }}">
 
     {{-- Styles --}}
-    @vite('resources/css/app.css')
+    @vite(['resources/css/app.css', 'resources/css/media.css'])
 </head>
 
 <body>
