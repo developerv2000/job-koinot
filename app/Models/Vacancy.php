@@ -13,4 +13,17 @@ class Vacancy extends Model
     {
         return $this->hasMany(Resume::class);
     }
+
+    public static function getDashItemsFinalized($params)
+    {
+        return self::orderBy($params['orderBy'], $params['orderType'])
+            ->withCount('resumes')
+            ->paginate(30, ['*'], 'page', $params['currentPage'])
+            ->appends(request()->except('page'));
+    }
+
+    public static function getAllMinified()
+    {
+        return self::orderBy('name', 'asc')->select('id', 'name')->get();
+    }
 }

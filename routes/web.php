@@ -24,12 +24,13 @@ Route::controller(ResumeController::class)->name('resumes.')->group(function () 
 });
 
 // Dashboard Routes
-Route::redirect('/dashboard', '/dashboard/resumes')->middleware('admin');
+Route::redirect('/dashboard', '/dashboard/resumes')->middleware('auth');
 
-Route::middleware('admin')->prefix('dashboard')->group(function () {
+Route::middleware('auth')->prefix('dashboard')->group(function () {
     Route::controller(ResumeController::class)->prefix('/resumes')->name('resumes.')->group(function () {
         Route::get('/', 'dashboardIndex')->name('dashboard.index');
 
+        Route::post('/download/{resume}', 'download')->name('download');
         Route::post('/destroy', 'destroy')->name('destroy');
     });
 
@@ -43,3 +44,5 @@ Route::middleware('admin')->prefix('dashboard')->group(function () {
         Route::post('/destroy', 'destroy')->name('destroy');
     });
 });
+
+require __DIR__.'/auth.php';

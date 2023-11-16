@@ -203,22 +203,56 @@ class Helper
         return request()->segment(2);
     }
 
-    public static function getRequestParams($defaultOrderBy, $defaultOrderType): array
+    /**
+     * Used in generating sort links & quering eloquent models
+     */
+    public static function getRequestParamsFor($model): array
     {
+        $request = request();
+
         $params = [
-            'orderBy' => request()->orderBy ?: $defaultOrderBy,
-            'orderType' => request()->orderType ?: $defaultOrderType,
+            'orderBy' => $request->orderBy ?: $model::DEFAULT_ORDER_BY,
+            'orderType' => $request->orderType ?: $model::DEFAULT_ORDER_TYPE,
             'currentPage' => LengthAwarePaginator::resolveCurrentPage(),
-            'keyword' => request()->keyword,
         ];
 
-        $params['reversedOrderType'] = self::reverseOrderType($params['orderType']);
+        $params['newOrderUrl'] = self::setupNewOrderUrl($params['orderType']);
 
         return $params;
+    }
+
+    private static function setupNewOrderUrl($currentOrderType)
+    {
+        $url = url()->current();
+        $queryParams = request()->query();
+
+        // remove orderBy
+        self::deleteArrayKeyIfExists($queryParams, 'orderBy');
+
+        // reverse orderType
+        $queryParams['orderType'] = self::reverseOrderType($currentOrderType);
+
+        $fullUrl = $url . '?' . http_build_query($queryParams);
+
+        return $fullUrl;
     }
 
     private static function reverseOrderType($orderType): string
     {
         return $orderType == 'asc' ? 'desc' : 'asc';
+    }
+
+    public static function deleteFileIfExists($filePath)
+    {
+        if (file_exists($filePath)) {
+            unlink($filePath);
+        }
+    }
+
+    public static function deleteArrayKeyIfExists(&$array, $key)
+    {
+        if (array_key_exists($key, $array)) {
+            unset($array[$key]);
+        }
     }
 }

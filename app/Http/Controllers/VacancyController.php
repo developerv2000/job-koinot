@@ -5,9 +5,17 @@ namespace App\Http\Controllers;
 use App\Models\Vacancy;
 use App\Http\Requests\StoreVacancyRequest;
 use App\Http\Requests\UpdateVacancyRequest;
+use App\Support\Helper;
+use App\Support\Traits\Destroyable;
+use Illuminate\Http\Request;
 
 class VacancyController extends Controller
 {
+    use Destroyable;
+
+    // used in Destroyable Trait
+    public $model = Vacancy::class;
+
     /**
      * Display a listing of the resource.
      */
@@ -16,6 +24,17 @@ class VacancyController extends Controller
         $vacancies = Vacancy::latest()->get();
 
         return view('vacancies.index', compact('vacancies'));
+    }
+
+    public function dashboardIndex(Request $request)
+    {
+        // order parameters
+        $params = Helper::getRequestParams('name', 'asc');
+
+        $items = Vacancy::getDashItemsFinalized($params);
+        $allItems = Vacancy::getAllMinified();
+
+        return view('dashboard.vacancies.index', compact('params', 'items', 'allItems'));
     }
 
     /**
