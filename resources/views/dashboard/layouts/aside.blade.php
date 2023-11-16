@@ -9,14 +9,14 @@
             {{-- Resumes --}}
             <li class="menu__item">
                 <a class="menu__link @if ($modelPrefixName == 'resumes') menu__link--active @endif" href="{{ route('resumes.dashboard.index') }}">
-                    <span class="material-symbols-outlined">chat</span> Анкеты
+                    <span class="material-symbols-outlined">description</span> Анкеты
                 </a>
             </li>
 
             {{-- Vacancies --}}
             <li class="menu__item">
                 <a class="menu__link @if ($modelPrefixName == 'vacancies') menu__link--active @endif" href="{{ route('vacancies.dashboard.index') }}">
-                    <span class="material-symbols-outlined">group</span> Вакансии
+                    <span class="material-symbols-outlined">format_list_bulleted</span> Вакансии
                 </a>
             </li>
         </ul>

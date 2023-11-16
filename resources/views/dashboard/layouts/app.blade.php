@@ -13,7 +13,7 @@
     <meta name="googlebot" content="noindex, nofollow" />
     <meta name="yandex" content="none">
 
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.png') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('img/main/favicon.png') }}">
 
     {{-- Selectize --}}
     <link rel="stylesheet" href="{{ asset('plugins/selectize/selectize.css') }}">
@@ -24,7 +24,7 @@
     {{-- Normalize CSS --}}
     <link rel="stylesheet" href="{{ asset('plugins/normalize.css') }}">
 
-    <link rel="stylesheet" href="{{ asset('dash/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('dashboard-assets/styles.css') }}">
 </head>
 
 <body class="body">
@@ -49,7 +49,7 @@
     <script src="{{ asset('plugins/simditor/uploader.js') }}"></script>
     <script src="{{ asset('plugins/simditor/simditor.js') }}"></script>
 
-    <script src="{{ asset('dash/script.js') }}"></script>
+    <script src="{{ asset('dashboard-assets/script.js') }}"></script>
 </body>
 
 </html>

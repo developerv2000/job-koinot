@@ -9,6 +9,11 @@ class Vacancy extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id'];
+
+    const DEFAULT_ORDER_BY = 'created_at';
+    const DEFAULT_ORDER_TYPE = 'desc';
+
     public function resumes()
     {
         return $this->hasMany(Resume::class);

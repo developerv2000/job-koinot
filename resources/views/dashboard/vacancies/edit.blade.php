@@ -1,5 +1,5 @@
 @extends('dashboard.layouts.app', [
-    'breadcrumbs' => ['Авторы', 'Редактировать', '#' . $item->id],
+    'breadcrumbs' => ['Вакансии', 'Редактировать', $item->name],
 
     'actions' => ['update', 'destroy'],
 ])
@@ -16,27 +16,16 @@
             'required' => true,
         ])
 
-        @include('dashboard.form.edit-components.image-input', [
-            'label' => 'Изображение',
-            'name' => 'photo',
-            'imageSrc' => asset('img/authors/' . $item->photo),
-            'required' => false,
+        @include('dashboard.form.edit-components.text-input', [
+            'label' => 'Зарплата',
+            'name' => 'salary',
+            'required' => true,
         ])
 
         @include('dashboard.form.edit-components.wysiwyg-textarea', [
-            'label' => 'Биография',
-            'name' => 'biography',
-            'required' => false,
-        ])
-
-        @include('dashboard.form.edit-components.single-select', [
-            'label' => 'Группа',
-            'name' => 'group_id',
+            'label' => 'Текст',
+            'name' => 'body',
             'required' => true,
-            'options' => $groups,
-            'relationName' => 'group',
-            'valueColumnName' => 'id',
-            'titleColumnName' => 'name',
         ])
     </form>
 

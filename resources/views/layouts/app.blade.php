@@ -10,6 +10,11 @@
 
     <title>Коиноти Нав</title>
 
+    {{-- Noindex --}}
+    <meta name="robots" content="none" />
+    <meta name="googlebot" content="noindex, nofollow" />
+    <meta name="yandex" content="none">
+
     {{-- Normalize --}}
     <link rel="stylesheet" href="{{ asset('plugins/normalize.css') }}">
 

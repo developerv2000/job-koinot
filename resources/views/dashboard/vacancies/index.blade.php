@@ -14,7 +14,7 @@
     @include('dashboard.searches.linked', ['titleColumn' => 'name'])
 
     <div class="table-container">
-        {{-- @include('dashboard.tables.authors') --}}
+        @include('dashboard.tables.vacancies')
     </div>
 
     @include('dashboard.modals.single-destroy')

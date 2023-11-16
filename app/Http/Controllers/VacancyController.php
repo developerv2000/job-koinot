@@ -29,7 +29,7 @@ class VacancyController extends Controller
     public function dashboardIndex(Request $request)
     {
         // order parameters
-        $params = Helper::getRequestParams('name', 'asc');
+        $params = Helper::getRequestParamsFor(Vacancy::class);
 
         $items = Vacancy::getDashItemsFinalized($params);
         $allItems = Vacancy::getAllMinified();
@@ -42,7 +42,7 @@ class VacancyController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.vacancies.create');
     }
 
     /**
@@ -50,38 +50,27 @@ class VacancyController extends Controller
      */
     public function store(StoreVacancyRequest $request)
     {
-        //
-    }
+        Vacancy::create($request->all());
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Vacancy $vacancy)
-    {
-        //
+        return redirect()->route('vacancies.dashboard.index');
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Vacancy $vacancy)
+    public function edit(Vacancy $item)
     {
-        //
+        return view('dashboard.vacancies.edit', compact('item'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateVacancyRequest $request, Vacancy $vacancy)
+    public function update(UpdateVacancyRequest $request)
     {
-        //
-    }
+        $item = Vacancy::find($request->id);
+        $item->update($request->all());
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Vacancy $vacancy)
-    {
-        //
+        return redirect($request->input('previous_url'));
     }
 }
