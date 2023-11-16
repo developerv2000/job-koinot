@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Support\Helper;
+use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +22,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        View::composer('dashboard.*', function ($view) {
+            $view->with('routeName', Route::currentRouteName())
+                ->with('modelPrefixName', Helper::getModelPrefixName());;
+        });
     }
 }
