@@ -26,7 +26,7 @@
                             <span class="upload-resume__desc">Добавить резюме</span>
                         </div>
 
-                        <input class="upload-resume__desc visually-hidden" type="file" name="resume" accept=".docx, .doc, .pdf">
+                        <input class="upload-resume__desc visually-hidden" type="file" name="resume" accept="application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/pdf">
                     </label>
                 </form>
             </div>

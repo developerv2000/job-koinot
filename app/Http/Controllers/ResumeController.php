@@ -14,7 +14,9 @@ class ResumeController extends Controller
      */
     public function store(StoreResumeRequest $request)
     {
-        dd($request);
+        Resume::handleStoreRequest($request);
+
+        return redirect()->back()->with('success', 'success!');
     }
 
     /**

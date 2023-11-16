@@ -140,7 +140,8 @@ a {
 
 .owl-nav {
     position: absolute;
-    top: 0;
+    top: 50%;
+    transform: translateY(-50%);
     left: 0;
     width: 100%;
     display: flex;
@@ -149,6 +150,19 @@ a {
     z-index: -1;
 }
 /* ------------ /end Carousel ------------ */
+
+
+/* ------------ Toast ------------ */
+.toast-list {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.toast-image {
+    width: 18px;
+    transform: translateY(-2px);
+}
+/* ------------ /end Toast ------------ */
 
 
 /* ------------ /end Carousel ------------ */
@@ -318,6 +332,10 @@ a {
     padding-top: 12px;
 }
 
+.upload-resume__label {
+    position: relative;
+}
+
 .upload-resume__btn {
     display: flex;
     align-items: center;
@@ -393,5 +411,24 @@ a {
 
 .companies__image {
     width: 100%;
+}
+
+/* Development */
+.development {
+    background-color: #F0F0F0;
+}
+
+.development__inner {
+    flex-direction: column;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.development__title {
+    margin-bottom: 40px;
+}
+
+.development .owl-carousel {
+    padding: 0 100px;
 }
 /* ------------ /end Home ------------ */

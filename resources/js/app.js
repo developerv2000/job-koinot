@@ -3,11 +3,13 @@ const MOBILE_BREAKPOINT = 480;
 
 const carouselPrevArrow = '<img src="/img/main/arrow-prev.png">';
 const carouselNextArrow = '<img src="/img/main/arrow-next.png">';
+const carouselPrevDarkArrow = '<img src="/img/main/arrow-prev-dark.png">';
+const carouselNextDarkArrow = '<img src="/img/main/arrow-next-dark.png">';
 
 const spinner = document.querySelector('.spinner');
-const resumeForm = document.querySelector('.upload-resume');
 const resumeInputs = document.querySelectorAll('.upload-resume__desc');
 const companiesCarousel = $('.companies-carousel');
+const galleryCarousel = $('.gallery-carousel');
 
 function showSpinner() {
     spinner.classList.add('spinner--visible');
@@ -21,7 +23,7 @@ resumeInputs.forEach((input) => {
     input.addEventListener('change', (evt) => {
         if (evt.target.files.length > 0) {
             showSpinner();
-            resumeForm.submit();
+            evt.target.closest('.upload-resume').submit();
         }
     });
 });
@@ -38,6 +40,22 @@ companiesCarousel.owlCarousel({
         },
         769: {
             items: 5,
+        }
+    }
+});
+
+galleryCarousel.owlCarousel({
+    loop: true,
+    margin: 12,
+    nav: true,
+    navText: [carouselPrevDarkArrow, carouselNextDarkArrow],
+    dots: false,
+    responsive: {
+        0: {
+            items: 1,
+        },
+        769: {
+            items: 2,
         }
     }
 });

@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rules\File;
 
 class StoreResumeRequest extends FormRequest
 {
@@ -22,7 +23,21 @@ class StoreResumeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'vacancy_id' => ['exists:vacancies,id'],
+            'resume' => [
+                'file', 'max:6000',
+                'mimetypes:application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/pdf'
+            ],
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            'vacancy_id.exists' => 'Ошибка. Пожалуйста, попробуйте заново',
+            'resume.file' => 'Неверный формат файла',
+            'resume.mimetypes' => 'Неверный формат файла. Файл должен быть MS Word или PDF формата',
+            'resume.max' => 'Слишком большой размер файла. Максимальный допустимый размер 6 MB',
         ];
     }
 }

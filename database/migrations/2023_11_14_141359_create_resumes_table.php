@@ -12,7 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('resumes', function (Blueprint $table) {
-            $table->id();
+            $table->unsignedInteger('id')->autoIncrement();
+            $table->unsignedSmallInteger('vacancy_id');
+            $table->string('filename');
+            $table->boolean('new')->default(1);
             $table->timestamps();
         });
     }
