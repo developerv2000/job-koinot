@@ -381,6 +381,23 @@ a {
     padding-top: 12px;
 }
 
+/* Accordion */
+.vacancies-accordion {
+    display: none;
+}
+
+.vacancies-accordion .accordion-body {
+    font-weight: 300;
+}
+
+.vacancies-accordion .vacancy-name {
+    margin-bottom: 4px;
+}
+
+.vacancies-accordion .vacancy-salary {
+    margin-bottom: 16px;
+}
+
 /* Values */
 .values__inner {
     flex-direction: column;

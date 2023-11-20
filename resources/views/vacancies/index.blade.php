@@ -26,6 +26,7 @@
         <div class="vacancies__inner main-container">
             <h1 class="vacancies__title main-title">Актуальные вакансии</h1>
             @include('vacancies.tab')
+            @include('vacancies.accordion')
         </div>
     </section>
 

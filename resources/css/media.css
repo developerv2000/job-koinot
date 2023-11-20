@@ -1,6 +1,141 @@
 @media screen and (max-width: 1500px) {
+
     .vacancies-tab>.nav,
     .vacancies-tab>.tab-content {
         max-height: 72vh;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .main-container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .main-title {
+        font-size: 24px;
+    }
+
+    .owl-carousel {
+        padding: 0 60px;
+    }
+
+    .owl-prev img,
+    .owl-next img {
+        width: 48px;
+    }
+
+    /* Welcome */
+    .welcome__image {
+        height: 400px;
+    }
+
+    .welcome__inner {
+        padding: 60px 40px;
+    }
+
+    .welcome__inner-content {
+        margin: auto;
+    }
+
+    .welcome__logo-image {
+        width: 220px;
+        margin-bottom: 40px;
+    }
+
+    .welcome__title {
+        font-size: 24px;
+    }
+
+    .welcome__desc-divider {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .welcome__desc {
+        max-width: 340px;
+        font-size: 20px;
+    }
+
+    .welcome__upload-resume .upload-resume__button {
+        font-size: 18px;
+    }
+
+    .welcome__upload-resume .upload-resume__button-icon {
+        width: 24px;
+    }
+
+    /* Vacancies */
+    .vacancies-tab {
+        display: none !important;
+    }
+
+    .vacancies-accordion {
+        display: block;
+    }
+
+    .vacancies__inner {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .vacancies__title {
+        margin-bottom: 24px;
+    }
+
+    /* Values */
+    .values__inner {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .values__title {
+        margin-bottom: 24px;
+    }
+
+    .values-list {
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .values-card {
+        flex-direction: row;
+        justify-content: flex-start;
+        width: calc(50% - 12px);
+    }
+
+    .values-card__image {
+        width: 80px;
+    }
+
+    /* Development */
+    .development__inner {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .development__title {
+        margin-bottom: 24px;
+    }
+
+    .development .owl-carousel {
+        padding: 0 60px;
+    }
+
+    .companies__inner {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .companies__title {
+        margin-bottom: 24px;
+    }
+
+    /* Footer */
+    .socials {
+        gap: 32px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {}
