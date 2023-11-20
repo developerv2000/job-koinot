@@ -71,8 +71,8 @@ function hideToasts() {
     const toast = document.querySelector('.toast');
 
     if (toast) {
-        toast.classList.remove('show')
-            .classList.add('fade')
-            .classList.add('hide');
+        toast.classList.remove('show');
+        toast.classList.add('fade');
+        toast.classList.add('hide');
     }
 }
