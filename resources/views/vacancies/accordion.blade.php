@@ -11,8 +11,11 @@
                 <div class="accordion-body">
                     <h2 class="vacancy-name">{{ $vacancy->name }}</h2>
                     <p class="vacancy-salary">{{ $vacancy->salary }}</p>
+                    <div class="vacancy-body">{!! $vacancy->body !!}</div>
 
-                    {!! $vacancy->body !!}
+                    <x-upload-resume class="accordion-body__upload-resume">
+                        <input type="hidden" name="vacancy_id" value="{{ $vacancy->id }}">
+                    </x-upload-resume>
                 </div>
             </div>
         </div>

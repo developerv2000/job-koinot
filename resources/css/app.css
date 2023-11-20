@@ -372,16 +372,16 @@ a {
     display: none;
 }
 
-.vacancies-accordion .accordion-body {
-    font-weight: 300;
-}
-
 .vacancies-accordion .vacancy-name {
     margin-bottom: 4px;
 }
 
 .vacancies-accordion .vacancy-salary {
     margin-bottom: 16px;
+}
+
+.accordion-body__upload-resume {
+    padding: 12px 0;
 }
 
 /* Values */
