@@ -46,7 +46,7 @@ function setupSimditor() {
             textarea: textarea,
             toolbarFloatOffset: '60px',
             imageButton: 'upload',
-            toolbar: ['title', 'bold', 'italic', 'underline', 'color', '|', 'ol', 'ul', 'blockquote', 'code', 'table', '|', 'link', 'hr', '|', 'indent', 'outdent', 'alignment'] //image removed
+            toolbar: ['bold', 'italic', 'underline', 'color', '|', 'ol', 'ul', 'blockquote', 'code', 'table', '|', 'link', 'hr', '|', 'indent', 'outdent', 'alignment'] // title ,image removed
             // cleanPaste: true, //clear all styles after pasting,
         });
     });
@@ -57,7 +57,7 @@ function setupSimditor() {
             textarea: textarea,
             toolbarFloatOffset: '60px',
             imageButton: 'upload',
-            toolbar: ['title', 'bold', 'italic', 'underline', 'color', '|', 'ol', 'ul', 'blockquote', 'code', 'table', '|', 'link', 'hr', '|', 'indent', 'outdent', 'alignment', 'image'],
+            toolbar: ['bold', 'italic', 'underline', 'color', '|', 'ol', 'ul', 'blockquote', 'code', 'table', '|', 'link', 'hr', '|', 'indent', 'outdent', 'alignment', 'image'], // title removed
             upload: {
                 url: '/simditor-image/upload',   // image upload url by server
                 params: { // additional parameters for request

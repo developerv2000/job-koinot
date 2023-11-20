@@ -16,19 +16,9 @@
                 <h2 class="vacancy-name">{{ $vacancy->name }}</h2>
                 <div class="vacancy-body">{!! $vacancy->body !!}</div>
 
-                <form class="upload-resume" action="{{ route('resumes.store') }}" method="POST" enctype="multipart/form-data">
-                    @csrf
+                <x-upload-resume class="tab-content__upload-resume">
                     <input type="hidden" name="vacancy_id" value="{{ $vacancy->id }}">
-
-                    <label class="upload-resume__label">
-                        <div class="upload-resume__btn">
-                            <img class="upload-resume__icon" src="{{ asset('img/main/attach.svg') }}" alt="attach">
-                            <span class="upload-resume__desc">Добавить резюме</span>
-                        </div>
-
-                        <input class="upload-resume__desc visually-hidden" type="file" name="resume" accept="application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/pdf">
-                    </label>
-                </form>
+                </x-upload-resume>
             </div>
         @endforeach
     </div>

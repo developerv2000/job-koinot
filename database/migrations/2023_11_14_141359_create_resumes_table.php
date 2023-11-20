@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('resumes', function (Blueprint $table) {
             $table->unsignedInteger('id')->autoIncrement();
-            $table->unsignedSmallInteger('vacancy_id');
+            $table->unsignedSmallInteger('vacancy_id')->nullable();
             $table->string('filename');
             $table->boolean('new')->default(1);
             $table->timestamps();

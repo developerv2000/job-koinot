@@ -7,9 +7,13 @@ const carouselPrevDarkArrow = '<img src="/img/main/arrow-prev-dark.png">';
 const carouselNextDarkArrow = '<img src="/img/main/arrow-next-dark.png">';
 
 const spinner = document.querySelector('.spinner');
-const resumeInputs = document.querySelectorAll('.upload-resume__desc');
+const resumeInputs = document.querySelectorAll('.upload-resume__input');
 const companiesCarousel = $('.companies-carousel');
 const galleryCarousel = $('.gallery-carousel');
+
+window.addEventListener('load', () => {
+    setTimeout(hideToasts, 10000);
+});
 
 function showSpinner() {
     spinner.classList.add('spinner--visible');
@@ -59,3 +63,13 @@ galleryCarousel.owlCarousel({
         }
     }
 });
+
+function hideToasts() {
+    const toast = document.querySelector('.toast');
+
+    if (toast) {
+        toast.classList.remove('show')
+            .classList.add('fade')
+            .classList.add('hide');
+    }
+}

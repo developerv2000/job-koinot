@@ -29,6 +29,7 @@ Route::redirect('/dashboard', '/dashboard/resumes')->middleware('auth');
 Route::middleware('auth')->prefix('dashboard')->group(function () {
     Route::controller(ResumeController::class)->prefix('/resumes')->name('resumes.')->group(function () {
         Route::get('/', 'dashboardIndex')->name('dashboard.index');
+        Route::get('/applicants', 'dashboardApplicants')->name('dashboard.applicants');
 
         Route::post('/download/{resume}', 'download')->name('download');
         Route::post('/destroy', 'destroy')->name('destroy');

@@ -15,6 +15,12 @@ trait Destroyable
             $this->model::find($id)->delete();
         }
 
+        // validate redirect on applicants delete,
+        // because model prefix name equals to 'resumes' on applicants index page
+        if (strpos(url()->previous(), '/resumes/applicants')) {
+            return redirect()->route('resumes.dashboard.applicants');
+        }
+
         return redirect()->route(Helper::getModelPrefixName() . '.dashboard.index');
     }
 }

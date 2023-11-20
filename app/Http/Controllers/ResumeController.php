@@ -35,10 +35,21 @@ class ResumeController extends Controller
         $vacancies = Vacancy::getAllMinified();
         $currentVacancyID = $request->vacancy_id;
 
-        $items = Resume::getDashItemsFinalized($params);
-        $allItemsCount = Resume::count();
+        $items = Resume::getDashItemsFinalized($params, false);
+        $allItemsCount = Resume::whereNotNull('vacancy_id')->count();
 
         return view('dashboard.resumes.index', compact('params', 'items', 'allItemsCount', 'vacancies', 'currentVacancyID'));
+    }
+
+    public function dashboardApplicants(Request $request)
+    {
+        // order parameters
+        $params = Helper::getRequestParamsFor(Resume::class);
+
+        $items = Resume::getDashItemsFinalized($params, true);
+        $allItemsCount = Resume::whereNull('vacancy_id')->count();
+
+        return view('dashboard.resumes.applicants', compact('params', 'items', 'allItemsCount'));
     }
 
     public function download(Request $request, Resume $resume)

@@ -7,9 +7,16 @@
 
         <div class="welcome__inner">
             <div class="welcome__inner-content main-container">
-                <img class="welcome__logo" src="{{ asset('img/main/logo-light.svg') }}" alt="logo">
+                <a class="logo welcome__logo" href="https://koinotinav.tj/">
+                    <img class="welcome__logo-image" src="{{ asset('img/main/logo-light.svg') }}" alt="logo">
+                </a>
+
                 <h3 class="welcome__title">Раскройте себя! Создайте себя!</h3>
-                <p class="welcome__desc">С большими возможностями к большим победам вместе!</p>
+
+                <div class="welcome__desc-divider">
+                    <p class="welcome__desc">С большими возможностями к большим победам вместе!</p>
+                    <x-upload-resume class="welcome__upload-resume" />
+                </div>
             </div>
         </div>
     </section>
@@ -29,23 +36,28 @@
 
             <div class="values-list">
                 <div class="values-card">
-                    <img class="values-card__image" src="{{ asset('img/home/development.svg') }}" alt="development">
+                    <img class="values-card__image" src="{{ asset('img/home/development.png') }}" alt="development">
                     <h4 class="values-card__title">Развитие</h4>
                 </div>
 
                 <div class="values-card">
-                    <img class="values-card__image" src="{{ asset('img/home/transformation.svg') }}" alt="transformation">
+                    <img class="values-card__image" src="{{ asset('img/home/transformation.png') }}" alt="transformation">
                     <h4 class="values-card__title">Трансформация</h4>
                 </div>
 
                 <div class="values-card">
-                    <img class="values-card__image" src="{{ asset('img/home/discipline.svg') }}" alt="discipline">
-                    <h4 class="values-card__title">Дисциплина</h4>
+                    <img class="values-card__image" src="{{ asset('img/home/professionalism.png') }}" alt="professionalism">
+                    <h4 class="values-card__title">Профессионализм</h4>
                 </div>
 
                 <div class="values-card">
-                    <img class="values-card__image" src="{{ asset('img/home/team.svg') }}" alt="team">
+                    <img class="values-card__image" src="{{ asset('img/home/team.png') }}" alt="team">
                     <h4 class="values-card__title">Командность</h4>
+                </div>
+
+                <div class="values-card">
+                    <img class="values-card__image" src="{{ asset('img/home/realization.png') }}" alt="realization">
+                    <h4 class="values-card__title">Самореализация</h4>
                 </div>
             </div>
         </div>
@@ -75,28 +87,44 @@
 
             <div class="carousel-container">
                 <div class="companies-carousel owl-carousel">
-                    <a class="companies__link" href="#" target="_blank">
-                        <img class="companies__image" src="{{ asset('img/companies/neouniverse.png') }}" alt="Neouniverse">
+                    <a class="companies__link" href="https://dustipharma.tj/" target="_blank">
+                        <img class="companies__image" src="{{ asset('img/companies/dustipharm.png') }}" alt="Dustipharm">
                     </a>
 
-                    <a class="companies__link" href="#" target="_blank">
-                        <img class="companies__image" src="{{ asset('img/companies/evolet.png') }}" alt="evolet">
+                    <a class="companies__link" href="https://madadpharm.tj/" target="_blank">
+                        <img class="companies__image" src="{{ asset('img/companies/madadpharm.png') }}" alt="Madadpharm">
                     </a>
 
-                    <a class="companies__link" href="#" target="_blank">
-                        <img class="companies__image" src="{{ asset('img/companies/salomat.png') }}" alt="salomat">
-                    </a>
-
-                    <a class="companies__link" href="#" target="_blank">
+                    <a class="companies__link" href="https://evar.tj/" target="_blank">
                         <img class="companies__image" src="{{ asset('img/companies/evar.png') }}" alt="evar">
                     </a>
 
-                    <a class="companies__link" href="#" target="_blank">
-                        <img class="companies__image" src="{{ asset('img/companies/belinda.png') }}" alt="belinda">
+                    <a class="companies__link" href="https://www.facebook.com/ToyotaTajMotors/" target="_blank">
+                        <img class="companies__image" src="{{ asset('img/companies/taj-motors.png') }}" alt="Taj Motors">
                     </a>
 
-                    <a class="companies__link" href="#" target="_blank">
-                        <img class="companies__image" src="{{ asset('img/companies/neouniverse.png') }}" alt="Neouniverse">
+                    <a class="companies__link" href="http://honaiman.tj/" target="_blank">
+                        <img class="companies__image" src="{{ asset('img/companies/honai-man.png') }}" alt="Honai Man">
+                    </a>
+
+                    <a class="companies__link" href="http://jysk.tj/" target="_blank">
+                        <img class="companies__image" src="{{ asset('img/companies/jysk.png') }}" alt="Jysk">
+                    </a>
+
+                    <a class="companies__link" href="https://kit.tj/" target="_blank">
+                        <img class="companies__image" src="{{ asset('img/companies/kit.png') }}" alt="Kit">
+                    </a>
+
+                    <a class="companies__link" href="https://ats.tj/" target="_blank">
+                        <img class="companies__image" src="{{ asset('img/companies/ats.png') }}" alt="ATS">
+                    </a>
+
+                    <a class="companies__link" href="https://www.salomat.tj/" target="_blank">
+                        <img class="companies__image" src="{{ asset('img/companies/salomat.png') }}" alt="Salomat">
+                    </a>
+
+                    <a class="companies__link" href="https://khirad.tj/" target="_blank">
+                        <img class="companies__image" src="{{ asset('img/companies/khirad.png') }}" alt="Khirad">
                     </a>
                 </div>
             </div>

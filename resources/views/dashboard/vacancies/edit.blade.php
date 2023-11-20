@@ -23,7 +23,7 @@
         ])
 
         @include('dashboard.form.edit-components.wysiwyg-textarea', [
-            'label' => 'Текст',
+            'label' => 'Текст. Пожалуйста, проверьте текст на ошибки, если использовали COPY + PASTE',
             'name' => 'body',
             'required' => true,
         ])
