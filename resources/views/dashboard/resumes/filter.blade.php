@@ -1,6 +1,7 @@
 <div class="search search--selectizeable">
-    <select class="selectize-singular--linked">
-        <option value="{{ route('resumes.dashboard.index') }}">Все вакансии</option>
+    <select class="selectize-singular--linked" placeholder="Поиск...">
+        <option></option>
+        <option value="{{ route('resumes.dashboard.index') }}"  @selected(!$currentVacancyID)>Все вакансии</option>
         @foreach ($vacancies as $vacancy)
             <option value="{{ route('resumes.dashboard.index') }}?vacancy_id={{ $vacancy->id }}" @selected($vacancy->id == $currentVacancyID)>{{ $vacancy->name }}</option>
         @endforeach

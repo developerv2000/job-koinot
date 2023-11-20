@@ -27,7 +27,9 @@ function setupComponents() {
     // Singular Selectize Linked
     $('.selectize-singular--linked').selectize({
         onChange(value) {
-            window.location = value;
+            if (value != '') {
+                window.location = value;
+            }
         }
     });
 
