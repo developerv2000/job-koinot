@@ -3,20 +3,16 @@
 @section('main')
     {{-- Welcome Banner --}}
     <section class="welcome">
-        <img class="welcome__image" src="{{ asset('img/home/banner.png') }}" alt="team">
+        <div class="welcome__inner main-container">
+            <a class="logo welcome__logo" href="https://koinotinav.tj/">
+                <img class="welcome__logo-image" src="{{ asset('img/main/logo-light.svg') }}" alt="logo">
+            </a>
 
-        <div class="welcome__inner">
-            <div class="welcome__inner-content main-container">
-                <a class="logo welcome__logo" href="https://koinotinav.tj/">
-                    <img class="welcome__logo-image" src="{{ asset('img/main/logo-light.svg') }}" alt="logo">
-                </a>
+            <h3 class="welcome__title">Раскройте себя! Создайте себя!</h3>
 
-                <h3 class="welcome__title">Раскройте себя! Создайте себя!</h3>
-
-                <div class="welcome__desc-divider">
-                    <p class="welcome__desc">С большими возможностями к большим победам вместе!</p>
-                    <x-upload-resume class="welcome__upload-resume" />
-                </div>
+            <div class="welcome__desc-divider">
+                <p class="welcome__desc">С большими возможностями к большим победам вместе!</p>
+                <x-upload-resume class="welcome__upload-resume" />
             </div>
         </div>
     </section>

@@ -26,16 +26,8 @@
     }
 
     /* Welcome */
-    .welcome__image {
-        height: 400px;
-    }
-
     .welcome__inner {
         padding: 60px 40px;
-    }
-
-    .welcome__inner-content {
-        margin: auto;
     }
 
     .welcome__logo-image {
@@ -138,4 +130,67 @@
 }
 
 
-@media screen and (max-width: 480px) {}
+@media screen and (max-width: 480px) {
+    .main-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .main-title {
+        font-size: 20px;
+    }
+
+    .owl-carousel {
+        padding: 0 40px;
+    }
+
+    .owl-prev img,
+    .owl-next img {
+        width: 32px;
+    }
+
+    /* Welcome */
+    .welcome {
+        background-position: left top;
+    }
+
+    .welcome__inner {
+        align-items: center;
+        text-align: center;
+    }
+
+    .welcome__title {
+        font-size: 22px;
+    }
+
+    .welcome__desc-divider {
+        align-items: center;
+    }
+
+    .welcome__desc {
+        padding: 12px 20px;
+        margin: 0;
+        font-size: 18px;
+    }
+
+    /* Values */
+    .values-list {
+        flex-direction: column;
+    }
+
+    .values-card {
+        width: 100%;
+        gap: 32px;
+    }
+
+    /* Development */
+    .development .owl-carousel {
+        padding: 0 40px;
+    }
+
+    /* Footer */
+    .socials {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
