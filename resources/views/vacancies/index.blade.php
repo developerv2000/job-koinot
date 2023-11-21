@@ -85,43 +85,43 @@
             <div class="carousel-container">
                 <div class="companies-carousel owl-carousel">
                     <a class="companies__link" href="https://dustipharma.tj/" target="_blank">
-                        <img class="companies__image" src="{{ asset('img/companies/dustipharm.png') }}" alt="Dustipharm">
+                        <img class="companies__image" src="{{ asset('img/companies/dustipharm.svg') }}" alt="Dustipharm">
                     </a>
 
                     <a class="companies__link" href="https://madadpharm.tj/" target="_blank">
-                        <img class="companies__image" src="{{ asset('img/companies/madadpharm.png') }}" alt="Madadpharm">
-                    </a>
-
-                    <a class="companies__link" href="https://evar.tj/" target="_blank">
-                        <img class="companies__image" src="{{ asset('img/companies/evar.png') }}" alt="evar">
-                    </a>
-
-                    <a class="companies__link" href="https://www.facebook.com/ToyotaTajMotors/" target="_blank">
-                        <img class="companies__image" src="{{ asset('img/companies/taj-motors.png') }}" alt="Taj Motors">
+                        <img class="companies__image" src="{{ asset('img/companies/madadpharm.svg') }}" alt="Madadpharm">
                     </a>
 
                     <a class="companies__link" href="http://honaiman.tj/" target="_blank">
-                        <img class="companies__image" src="{{ asset('img/companies/honai-man.png') }}" alt="Honai Man">
+                        <img class="companies__image" src="{{ asset('img/companies/honai-man.svg') }}" alt="Honai Man">
+                    </a>
+
+                    <a class="companies__link" href="https://evar.tj/" target="_blank">
+                        <img class="companies__image" src="{{ asset('img/companies/evar.svg') }}" alt="evar">
+                    </a>
+
+                    <a class="companies__link" href="https://www.facebook.com/ToyotaTajMotors/" target="_blank">
+                        <img class="companies__image" src="{{ asset('img/companies/taj-motors.svg') }}" alt="Taj Motors">
                     </a>
 
                     <a class="companies__link" href="http://jysk.tj/" target="_blank">
-                        <img class="companies__image" src="{{ asset('img/companies/jysk.png') }}" alt="Jysk">
+                        <img class="companies__image" src="{{ asset('img/companies/jysk.svg') }}" alt="Jysk">
                     </a>
 
                     <a class="companies__link" href="https://kit.tj/" target="_blank">
-                        <img class="companies__image" src="{{ asset('img/companies/kit.png') }}" alt="Kit">
+                        <img class="companies__image" src="{{ asset('img/companies/kit.svg') }}" alt="Kit">
                     </a>
 
                     <a class="companies__link" href="https://ats.tj/" target="_blank">
-                        <img class="companies__image" src="{{ asset('img/companies/ats.png') }}" alt="ATS">
+                        <img class="companies__image" src="{{ asset('img/companies/ats.svg') }}" alt="ATS">
                     </a>
 
                     <a class="companies__link" href="https://www.salomat.tj/" target="_blank">
-                        <img class="companies__image" src="{{ asset('img/companies/salomat.png') }}" alt="Salomat">
+                        <img class="companies__image" src="{{ asset('img/companies/salomat.svg') }}" alt="Salomat">
                     </a>
 
                     <a class="companies__link" href="https://khirad.tj/" target="_blank">
-                        <img class="companies__image" src="{{ asset('img/companies/khirad.png') }}" alt="Khirad">
+                        <img class="companies__image" src="{{ asset('img/companies/khirad.svg') }}" alt="Khirad">
                     </a>
                 </div>
             </div>

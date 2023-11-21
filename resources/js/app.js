@@ -34,7 +34,7 @@ resumeInputs.forEach((input) => {
 
 companiesCarousel.owlCarousel({
     loop: true,
-    margin: 20,
+    margin: 32,
     nav: true,
     navText: [carouselPrevArrow, carouselNextArrow],
     dots: false,
