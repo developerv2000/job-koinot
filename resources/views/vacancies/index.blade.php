@@ -67,16 +67,16 @@
 
             <div class="carousel-container">
                 <div class="gallery-carousel owl-carousel">
-                    <img src="{{ asset('img/gallery/1.JPG') }}" alt="gallery">
-                    <img src="{{ asset('img/gallery/2.JPG') }}" alt="gallery">
-                    <img src="{{ asset('img/gallery/3.JPG') }}" alt="gallery">
-                    <img src="{{ asset('img/gallery/4.JPG') }}" alt="gallery">
-                    <img src="{{ asset('img/gallery/5.JPG') }}" alt="gallery">
-                    <img src="{{ asset('img/gallery/6.JPG') }}" alt="gallery">
-                    <img src="{{ asset('img/gallery/7.JPG') }}" alt="gallery">
-                    <img src="{{ asset('img/gallery/8.JPG') }}" alt="gallery">
-                    <img src="{{ asset('img/gallery/9.JPG') }}" alt="gallery">
-                    <img src="{{ asset('img/gallery/10.JPG') }}" alt="gallery">
+                    <img src="{{ asset('img/gallery/1.jpg') }}" alt="gallery">
+                    <img src="{{ asset('img/gallery/2.jpg') }}" alt="gallery">
+                    <img src="{{ asset('img/gallery/3.jpg') }}" alt="gallery">
+                    <img src="{{ asset('img/gallery/4.jpg') }}" alt="gallery">
+                    <img src="{{ asset('img/gallery/5.jpg') }}" alt="gallery">
+                    <img src="{{ asset('img/gallery/6.jpg') }}" alt="gallery">
+                    <img src="{{ asset('img/gallery/7.jpg') }}" alt="gallery">
+                    <img src="{{ asset('img/gallery/8.jpg') }}" alt="gallery">
+                    <img src="{{ asset('img/gallery/9.jpg') }}" alt="gallery">
+                    <img src="{{ asset('img/gallery/10.jpg') }}" alt="gallery">
                 </div>
             </div>
         </div>
