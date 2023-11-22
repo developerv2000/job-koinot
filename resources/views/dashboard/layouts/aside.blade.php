@@ -15,7 +15,7 @@
 
             <li class="menu__item">
                 <a class="menu__link @if ($routeName == 'resumes.dashboard.applicants') menu__link--active @endif" href="{{ route('resumes.dashboard.applicants') }}">
-                    <span class="material-symbols-outlined">manage_search</span> Соискатели
+                    <span class="material-symbols-outlined">manage_search</span> Резюме
                 </a>
             </li>
 

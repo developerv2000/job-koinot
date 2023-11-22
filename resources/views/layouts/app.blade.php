@@ -8,12 +8,15 @@
 
     <link rel="icon" type="image/x-icon" href="{{ asset('img/main/favicon.png') }}">
 
-    <title>Коиноти Нав</title>
+    <title>Коиноти Нав — Вакансии</title>
 
-    {{-- Noindex --}}
-    <meta name="robots" content="none" />
-    <meta name="googlebot" content="noindex, nofollow" />
-    <meta name="yandex" content="none">
+    <meta property="og:title" content="Коиноти Нав — Вакансии">
+    <meta name="keywords" content="Работа в Таджикистане, работа в Душанбе, карьера в Таджикистане, карьера в Душанбе, вакансии в Душанбе, вакансии в Таджикистане, холдинги Душанбе, свежие вакансии, рабочие места, работа в холдинге, профессиональный рост, развитие, специалисты, вакансии ведущих компаний, карьера в холдинге, работа в команде, сфера деятельности">
+
+    <meta name="description" content="Просмотр вакансий компании КОИНОТИ НАВ. Подробнее о рабочих местах в компании КОИНОТИ НАВ. Присоединяйтесь к нашей команде — свежие вакансии, зарплата, условия работы, возможности, карьерный рост">
+    <meta property="og:description" content="Просмотр вакансий компании КОИНОТИ НАВ. Подробнее о рабочих местах в компании КОИНОТИ НАВ. Присоединяйтесь к нашей команде — свежие вакансии, зарплата, условия работы, возможности, карьерный рост">
+    <meta property="og:image" content="{{ asset('img/main/share-logo.png') }}">
+    <meta property="og:image:alt" content="Коиноти Нав лого">
 
     {{-- Normalize --}}
     <link rel="stylesheet" href="{{ asset('plugins/normalize.css') }}">

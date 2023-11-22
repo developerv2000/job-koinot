@@ -19,6 +19,17 @@ class Vacancy extends Model
         return $this->hasMany(Resume::class);
     }
 
+    protected static function booted(): void
+    {
+        static::creating(function ($item) {
+            $item->validateSalary();
+        });
+
+        static::updating(function ($item) {
+            $item->validateSalary();
+        });
+    }
+
     public static function getDashItemsFinalized($params)
     {
         return self::orderBy($params['orderBy'], $params['orderType'])
@@ -30,5 +41,10 @@ class Vacancy extends Model
     public static function getAllMinified()
     {
         return self::orderBy('name', 'asc')->select('id', 'name')->get();
+    }
+
+    public function validateSalary()
+    {
+        $this->salary = $this->salary ? $this->salary : 'Договорная';
     }
 }

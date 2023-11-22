@@ -9,15 +9,17 @@
         @csrf
 
         @include('dashboard.form.create-components.text-input', [
-            'label' => 'Имя',
+            'label' => 'Название вакансии',
+            'placeholder' => '',
             'name' => 'name',
             'required' => true,
         ])
 
         @include('dashboard.form.create-components.text-input', [
             'label' => 'Зарплата',
+            'placeholder' => 'Договорная',
             'name' => 'salary',
-            'required' => true,
+            'required' => false,
         ])
 
         @include('dashboard.form.create-components.wysiwyg-textarea', [
