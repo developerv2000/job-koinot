@@ -76,3 +76,11 @@ function hideToasts() {
         toast.classList.add('hide');
     }
 }
+
+// Scroll Top Button
+document.querySelector('.scroll-top').addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+});

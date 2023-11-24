@@ -1,6 +1,6 @@
 @extends('dashboard.layouts.app', [
     'breadcrumbs' => [
-        'Все резюме - ' . $allItemsCount . ' элементов'
+        'Все резервы - ' . $allItemsCount . ' элементов'
     ],
 
     'actions' => [

@@ -39,22 +39,9 @@
         font-size: 24px;
     }
 
-    .welcome__desc-divider {
-        flex-direction: column;
-        gap: 20px;
-    }
-
     .welcome__desc {
         max-width: 340px;
         font-size: 20px;
-    }
-
-    .welcome__upload-resume .upload-resume__button {
-        font-size: 18px;
-    }
-
-    .welcome__upload-resume .upload-resume__button-icon {
-        width: 24px;
     }
 
     /* Vacancies */
@@ -73,6 +60,10 @@
 
     .vacancies__title {
         margin-bottom: 24px;
+    }
+
+    .vacancies__applicants {
+        margin-top: 24px;
     }
 
     /* Values */
@@ -163,10 +154,6 @@
         font-size: 22px;
     }
 
-    .welcome__desc-divider {
-        align-items: center;
-    }
-
     .welcome__desc {
         padding: 12px 20px;
         margin: 0;
@@ -189,6 +176,10 @@
     }
 
     /* Footer */
+    .footer__inner {
+        align-items: self-end;
+    }
+
     .socials {
         flex-direction: column;
         gap: 20px;

@@ -9,20 +9,21 @@
             </a>
 
             <h3 class="welcome__title">Раскройте себя! Создайте себя!</h3>
-
-            <div class="welcome__desc-divider">
-                <p class="welcome__desc">С большими возможностями к большим победам вместе!</p>
-                <x-upload-resume class="welcome__upload-resume" />
-            </div>
+            <p class="welcome__desc">С большими возможностями к большим победам вместе!</p>
         </div>
     </section>
 
     {{-- Vacancies --}}
     <section class="vacancies">
         <div class="vacancies__inner main-container">
-            <h1 class="vacancies__title main-title">Актуальные вакансии</h1>
+            <h1 class="vacancies__title main-title">Актуальные вакансии ({{ $vacancies->count() }})</h1>
             @include('vacancies.tab')
             @include('vacancies.accordion')
+
+            <div class="vacancies__applicants">
+                <p class="vacancies__applicants-text">Если вы не нашли подходящую вакансию, прикрепить свое резюме</p>
+                <x-upload-applicants-resume />
+            </div>
         </div>
     </section>
 
