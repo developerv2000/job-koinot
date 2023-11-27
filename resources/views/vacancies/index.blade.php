@@ -21,7 +21,7 @@
             @include('vacancies.accordion')
 
             <div class="vacancies__applicants">
-                <p class="vacancies__applicants-text">Если вы не нашли подходящую вакансию, прикрепить свое резюме</p>
+                <p class="vacancies__applicants-text">Если Вы не нашли подходящую вакансию, прикрепите своё резюме для Резерва:</p>
                 <x-upload-applicants-resume />
             </div>
         </div>
