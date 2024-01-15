@@ -15,7 +15,7 @@
 
     <meta name="description" content="Просмотр вакансий компании КОИНОТИ НАВ. Подробнее о рабочих местах в компании КОИНОТИ НАВ. Присоединяйтесь к нашей команде — свежие вакансии, зарплата, условия работы, возможности, карьерный рост">
     <meta property="og:description" content="Просмотр вакансий компании КОИНОТИ НАВ. Подробнее о рабочих местах в компании КОИНОТИ НАВ. Присоединяйтесь к нашей команде — свежие вакансии, зарплата, условия работы, возможности, карьерный рост">
-    <meta property="og:image" content="{{ asset('img/main/share-logo.png') }}">
+    <meta property="og:image" content="{{ asset('img/main/share.png') }}">
     <meta property="og:image:alt" content="Коиноти Нав лого">
 
     {{-- Normalize --}}
