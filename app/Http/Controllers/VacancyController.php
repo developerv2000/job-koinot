@@ -16,14 +16,24 @@ class VacancyController extends Controller
     // used in Destroyable Trait
     public $model = Vacancy::class;
 
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    public function index(Request $request)
     {
         $vacancies = Vacancy::latest()->get();
 
-        return view('vacancies.index', compact('vacancies'));
+        // set active vacancy as first item to highlight
+        $activeVacancy = null;
+
+        if ($request->vacancy) {
+            $activeVacancy = Vacancy::where('slug', $request->vacancy)->first();
+
+            $vacancies = $vacancies->reject(function ($value) use ($activeVacancy) {
+                return $value->id == $activeVacancy->id;
+            });
+
+            $vacancies = $vacancies->prepend($activeVacancy);
+        }
+
+        return view('vacancies.index', compact('vacancies', 'activeVacancy'));
     }
 
     public function dashboardIndex(Request $request)

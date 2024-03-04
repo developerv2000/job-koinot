@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Support\Helper;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -23,10 +24,12 @@ class Vacancy extends Model
     {
         static::creating(function ($item) {
             $item->validateSalary();
+            $item->validateSlug();
         });
 
         static::updating(function ($item) {
             $item->validateSalary();
+            $item->validateSlug();
         });
     }
 
@@ -46,5 +49,10 @@ class Vacancy extends Model
     public function validateSalary()
     {
         $this->salary = $this->salary ? $this->salary : 'Договорная';
+    }
+
+    public function validateSlug()
+    {
+        $this->slug = Helper::generateSlug($this->name);
     }
 }

@@ -40,8 +40,9 @@
                 </td>
 
                 <td class="table__actions">
-                    @include('dashboard.table-components.destroy-button')
+                    @include('dashboard.table-components.view-button', ['href' => route('vacancies.index') . '?vacancy=' . $item->slug . '#vacancies'])
                     @include('dashboard.table-components.edit-button')
+                    @include('dashboard.table-components.destroy-button')
                 </td>
             </tr>
         @endforeach

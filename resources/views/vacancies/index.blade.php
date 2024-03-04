@@ -14,7 +14,7 @@
     </section>
 
     {{-- Vacancies --}}
-    <section class="vacancies">
+    <section class="vacancies" id="vacancies">
         <div class="vacancies__inner main-container">
             <h1 class="vacancies__title main-title">Актуальные вакансии ({{ $vacancies->count() }})</h1>
             @include('vacancies.tab')

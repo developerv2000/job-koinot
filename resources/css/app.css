@@ -115,6 +115,7 @@ a {
 .upload-resume__button-icon {
     width: 28px;
 }
+
 /* ------------ /end Upload Resume ------------ */
 
 
@@ -173,6 +174,7 @@ a {
     margin: 0;
     z-index: -1;
 }
+
 /* ------------ /end Carousel ------------ */
 
 
@@ -186,6 +188,7 @@ a {
     width: 18px;
     transform: translateY(-2px);
 }
+
 /* ------------ /end Toast ------------ */
 
 
@@ -242,9 +245,10 @@ a {
     padding-top: 80px;
     padding-bottom: 120px;
     color: white;
+    align-items: flex-start;
 }
 
-.welcome__logo-image {
+.welcome__logo {
     margin-bottom: 68px;
 }
 
@@ -464,4 +468,5 @@ a {
 .development .owl-carousel {
     padding: 0 100px;
 }
+
 /* ------------ /end Home ------------ */

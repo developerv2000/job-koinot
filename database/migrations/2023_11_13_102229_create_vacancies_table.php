@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('vacancies', function (Blueprint $table) {
             $table->unsignedSmallInteger('id')->autoIncrement();
             $table->string('name');
+            $table->string('slug')->unique();
             $table->string('salary');
             $table->text('body');
             $table->timestamps();
