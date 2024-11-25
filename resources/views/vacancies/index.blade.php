@@ -119,7 +119,7 @@
                     </a>
 
                     <a class="companies__link" href="https://ats.tj/" target="_blank">
-                        <img class="companies__image" src="{{ asset('img/companies/ats.svg') }}" alt="ATS">
+                        <img class="companies__image" src="{{ asset('img/companies/ats.png') }}" alt="ATS">
                     </a>
 
                     <a class="companies__link" href="https://www.salomat.tj/" target="_blank">
