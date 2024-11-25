@@ -445,8 +445,8 @@ a {
     display: flex;
 }
 
-.companies__image {
-    width: 100%;
+.owl-carousel .owl-item .companies__image {
+    width: auto;
     max-height: 72px;
 }
 
